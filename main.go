@@ -31,7 +31,7 @@ func main() {
 		out, _ := json.MarshalIndent(res, "", "  ")
 
 		// Normally this would be application/json, but we don't want to prompt downloads
-		w.Header().Set("Content-Type", "text/plain")
+		w.Header().Set("Content-Type", "text/plain" )
 
 		io.WriteString(w, string(out))
 
